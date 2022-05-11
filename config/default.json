@@ -1,0 +1,6 @@
+{
+	"serverPort":5000,
+	"dbUrl":"mongodb+srv://dr1zzle:0QEA4oMdbAtxOpWs@cluster0.809z7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	"secretKey":"i'm not gay",
+	"filePath":"C:\\Users\\Marat\\Desktop\\web\\cloudify\\server\\files"
+}
