@@ -70,6 +70,10 @@ class FileController {
         parent: parent ? parent._id : null,
         user: user._id,
       });
+      if (parent) {
+        parent.childs = [...parent.childs, dbFile];
+        await parent.save();
+      }
       await dbFile.save();
       await user.save();
 
@@ -102,6 +106,13 @@ class FileController {
       user.usedSpace = user.usedSpace - file.size;
       fileService.deleteFile(req, file);
       await file.remove();
+      if (file.parent) {
+        const parent = await File.findOne({ _id: file.parent, user: req.user.id });
+        parent.childs = [
+          ...parent.childs.filter((id) => id.toString() !== req.query.id.toString()),
+        ];
+        await parent.save();
+      }
       await user.save();
       return res.json({ message: 'File was deleted' });
     } catch (e) {
