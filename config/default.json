@@ -1,6 +1,6 @@
 {
 	"serverPort":5000,
-	"dbUrl":"mongodb+srv://dr1zzle:0QEA4oMdbAtxOpWs@cluster0.809z7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	"dbUrl":"mongodb+srv://dr1zzle:NOu8PXIw0ON9WqhI@cluster0.809z7.mongodb.net/?retryWrites=true&w=majority",
 	"secretKey":"i'm not gay",
 	"filePath":"D:\\Web\\cloudify\\serene-brushlands-28260\\files"
 }
