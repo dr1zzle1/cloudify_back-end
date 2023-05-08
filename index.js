@@ -5,6 +5,7 @@ const fileUpload = require('express-fileupload');
 const authRouter = require('./routes/auth.routes');
 const fileRouter = require('./routes/file.routes');
 const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT || config.get('serverPort');
 const corsMiddleware = require('./middleware/cors.middleware');
 const filePathMiddleware = require('./middleware/filepath.middleware');
