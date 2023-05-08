@@ -120,9 +120,6 @@ class FileController {
       return res.status(400).json({ message: 'Dir is not empty' });
     }
   }
-  async getData(req, res) {
-    return res.json({ message: 'i am working' });
-  }
 }
 
 module.exports = new FileController();
